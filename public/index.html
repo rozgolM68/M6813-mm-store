@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff4f8"><title>M6813.mm | لوازم گل‌سازی</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><a class="brand" id="brand" href="/">🌷 M6813.mm</a><a class="admin-link" href="#admin">ورود مدیر</a></header>
+<section class="hero"><div id="announcement" class="announcement" hidden></div><span class="eyebrow" id="heroEyebrow">فروشگاه لوازم هنری و گل‌سازی</span><h1 id="heroHeadline">رنگ و زیبایی برای هنر دست شما</h1><p id="heroSubtitle">انواع پیپ‌پاکن، روبان و ملزومات ساخت گل‌های دست‌ساز</p><a class="button" id="heroButton" href="#products">دیدن محصولات</a></section>
+<main>
+<div class="section-head" id="products"><div><span class="eyebrow">ویترین فروشگاه</span><h2 id="productsTitle">محصولات</h2></div><span id="count" class="muted"></span></div>
+<div class="filters"><button class="filter active" data-cat="همه">همه</button><button class="filter" data-cat="پیپ‌پاکن">پیپ‌پاکن</button><button class="filter" data-cat="روبان">روبان</button><button class="filter" data-cat="لوازم گل‌سازی">لوازم گل‌سازی</button><button class="filter" data-cat="سایر">سایر</button></div>
+<div id="productsGrid" class="grid"><p class="empty">در حال دریافت محصولات…</p></div>
+<section class="reels-section" id="reels"><div class="section-head"><div><span class="eyebrow" id="reelsEyebrow">ویدئوهای کوتاه فروشگاه</span><h2 id="reelsTitle">ریلزها</h2></div></div><div id="reelsGrid" class="reels-grid"><p class="empty">در حال دریافت ریلزها…</p></div></section>
+<section id="admin" class="admin">
+<div class="section-head"><div><span class="eyebrow">دسترسی اختصاصی</span><h2>پنل مدیریت</h2></div></div>
+<div id="loginBox" class="panel"><p>ورود فقط برای مدیر فروشگاه</p><form id="loginForm"><label>نام کاربری<input name="username" autocomplete="username" required value="M6813.mm"></label><label>رمز عبور<input name="password" type="password" autocomplete="current-password" required></label><button class="button" type="submit">ورود به پنل</button><p id="loginMsg" class="message"></p></form></div>
+<div id="dashboard" class="panel" hidden><div class="dash-head"><h3>مدیریت فروشگاه</h3><button id="logout" class="ghost">خروج</button></div>
+<hr class="divider"><h3>ویرایش متن‌های سایت</h3>
+<form id="settingsForm" class="product-form">
+<label>نام فروشگاه<input name="brand" maxlength="100" required></label>
+<label>متن کوچک بالای صفحه<input name="eyebrow" maxlength="200"></label>
+<label>تیتر اصلی صفحه<input name="headline" maxlength="200" required></label>
+<label>توضیح زیر تیتر<textarea name="subtitle" rows="2"></textarea></label>
+<label>متن دکمه اصلی<input name="buttonText"></label>
+<label>عنوان بخش محصولات<input name="productsTitle"></label>
+<label>عنوان بخش ریلزها<input name="reelsTitle"></label>
+<label>متن کوچک بخش ریلزها<input name="reelsEyebrow"></label>
+<label>عنوان درباره فروشگاه<input name="aboutTitle"></label>
+<label>توضیحات درباره فروشگاه<textarea name="aboutText" rows="4"></textarea></label>
+<label>اطلاعیه یا متن بنر<textarea name="announcement" rows="2"></textarea></label>
+<label>شماره تماس<input name="phone" placeholder="اختیاری"></label>
+<label>آدرس صفحه اینستاگرام یا شبکه اجتماعی<input name="instagram" placeholder="https://..."></label>
+<label>متن پایین سایت (فوتر)<input name="footer"></label>
+<button class="button" type="submit">ذخیره متن‌های سایت</button><p id="settingsMsg" class="message"></p>
+</form>
+<hr class="divider"><h3>افزودن محصول جدید</h3><form id="productForm" class="product-form" enctype="multipart/form-data">
+<label>نام محصول<input name="name" required placeholder="مثلاً پیپ‌پاکن صورتی"></label>
+<label>دسته‌بندی<select name="category"><option>پیپ‌پاکن</option><option>روبان</option><option>لوازم گل‌سازی</option><option>سایر</option></select></label>
+<label>قیمت<input name="price" placeholder="مثلاً ۵۰٬۰۰۰ تومان"></label>
+<label>توضیحات<textarea name="description" rows="3" placeholder="رنگ، اندازه، تعداد و…"></textarea></label>
+<label class="upload">عکس محصول<input name="image" type="file" accept="image/png,image/jpeg,image/webp,image/gif"><small>حداکثر ۵ مگابایت</small></label>
+<button class="button" type="submit">＋ افزودن محصول</button><p id="productMsg" class="message"></p>
+</form><div id="manageList" class="manage-list"></div>
+<hr class="divider"><h3>آپلود ریلز جدید</h3>
+<form id="reelForm" class="product-form" enctype="multipart/form-data">
+<label>عنوان ریلز<input name="title" required placeholder="مثلاً رنگ‌های جدید پیپ‌پاکن"></label>
+<label>توضیحات<textarea name="description" rows="2" placeholder="توضیح کوتاه درباره ویدئو"></textarea></label>
+<label class="upload">فایل ویدئو<input name="video" type="file" accept="video/mp4,video/webm,video/quicktime" required><small>MP4، WebM یا MOV؛ حداکثر ۱۰۰ مگابایت</small></label>
+<button class="button" type="submit">＋ آپلود ریلز</button><p id="reelMsg" class="message"></p>
+</form><div id="manageReels" class="manage-list"></div></div>
+</section>
+<section class="about" id="about"><span class="eyebrow" id="aboutTitle">درباره فروشگاه</span><p id="aboutText">به فروشگاه ما خوش آمدید.</p><div id="contactInfo"></div></section>
+</main><footer id="footerText">ساخته‌شده با عشق ❤️</footer><script src="/app.js"></script>
+</body></html>
